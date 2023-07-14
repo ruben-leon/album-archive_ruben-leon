@@ -1,0 +1,15 @@
+.button {
+    /* background-color: rgba(64, 64, 183, 0.768); */
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: rgb(203, 81, 81);
+    border-color: rgb(203, 81, 81); */
+}
+
+/* .button:hover {
+    background-color: rgb(205, 34, 34);
+    border-color: black;
+} */
+
+.mb-3 {
+    font-family: 'Montserrat', sans-serif;
+}

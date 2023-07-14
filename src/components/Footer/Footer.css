@@ -1,0 +1,9 @@
+.footer {
+    width: 100vw;
+    flex-basis: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    font-family: 'Montserrat', sans-serif;
+}
