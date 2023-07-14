@@ -1,3 +1,36 @@
 .details {
     font-family: 'Montserrat', sans-serif;
 }
+
+@media (max-width: 1000px) {
+    .cover-image {
+        width: 25em;
+        height: 25em;
+    }
+}
+
+@media (max-width: 715px) {
+    .cover-image {
+        width: 20em;
+        height: 20em;
+    }
+}
+
+@media (max-width: 650px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    .infos {
+        margin-top: 2em;
+        padding: 0px !important;
+    }
+
+    .cover-image {
+        margin-right: 0px !important;
+    }
+}

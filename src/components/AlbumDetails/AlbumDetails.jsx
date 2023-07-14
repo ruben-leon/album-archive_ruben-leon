@@ -12,8 +12,8 @@ function AlbumDetails({ albums }) {
   return (
     <div className='details'>
         
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5em'}}>
-            <div style={{width: '50%', paddingLeft: '4em', paddingRight: '3em' }}>
+        <div className='flex-container' style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5em'}}>
+            <div className='infos' style={{width: '50%', paddingLeft: '4em', paddingRight: '3em' }}>
                 <h1>{album.name}</h1>
                 <h3>{album.artists[0].name}</h3>
                 <h5 style={{marginTop: '1em'}}>Released: {album.release_date.slice(0, 4)}</h5>
@@ -24,7 +24,7 @@ function AlbumDetails({ albums }) {
                           </a>
                   </Container>
             </div>
-            <img src={album.images[0].url} alt="Album Cover" style={{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', marginRight: '2em'}} />
+            <img className='cover-image' src={album.images[0].url} alt="Album Cover" style={{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', marginRight: '2em'}} />
         </div>
 
     </div>

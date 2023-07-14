@@ -14,7 +14,7 @@ function Results({ albums }) {
           <Route
             path="/"
             element={
-              <Row className="mx-2 row row-cols-4">
+              <Row className="mx-2 row row-cols-2 row-cols-md-3 row-cols-lg-4">
                 {albums.map((album, i) => (
                   <Card
                     key={i}
