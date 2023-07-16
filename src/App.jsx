@@ -4,10 +4,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Input from './components/Input/Input';
 import Results from './components/Results/Results';
-import './App.css'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import AlbumDetails from './components/AlbumDetails/AlbumDetails';
+import './App.css'
 
 export const Context = React.createContext();
 
@@ -19,6 +19,7 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [accessToken, setAccessToken] = useState("");
   const [albums, setAlbums] = useState([]);
+  const [tracks, setTracks] = useState([]);
 
   useEffect(() => {
 
@@ -42,7 +43,6 @@ function App() {
     var searchParameters = {
       method: 'GET',
       headers: {
-    /*     'Content_Type': 'application/json', */
         'Authorization': 'Bearer ' + accessToken
       }
     }
@@ -52,43 +52,62 @@ function App() {
     
     console.log(artistID);
 
-    var returnedAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistID + '/albums' + '?include_groups=album&market=US&limit=50', searchParameters)
+    /* var returnedAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistID + '/albums' + '?include_groups=album&market=US&limit=50', searchParameters)
       .then(response => response.json())
       .then(data => {
         console.log(data);
         setAlbums(data.items);
-      });
+        const albumIDs = data.items.map(item => item.id);
+        setTracks(albumIDs);
+        console.log(albumIDs);
+      }); */
+      var returnedAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistID + '/albums' + '?include_groups=album&market=US&limit=50', searchParameters)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setAlbums(data.items);
+        const albumIDs = data.items.map(item => item.id);
+        
+        // Fetch tracks for each album
+        const tracksPromises = albumIDs.map(albumID =>
+          fetch(`https://api.spotify.com/v1/albums/${albumID}/tracks`, searchParameters)
+            .then(response => response.json())
+            .then(data => data.items.map(item => item.name))
+        );
+
+        Promise.all(tracksPromises)
+          .then(allTracks => {
+            const tracksByAlbum = albumIDs.reduce((result, albumID, index) => {
+              result[albumID] = allTracks[index];
+              return result;
+            }, {});
+            setTracks(tracksByAlbum);
+          })
+          .catch(error => {
+            console.error('Error fetching tracks:', error);
+          });
+      });   
   }
-  console.log(albums);
+
 
   return (
    
- /*    <div className='App'>
-      <Context.Provider value={[searchInput, setSearchInput]}>
-        <Header />
-        <Input search={search} />
-        <Results albums={albums} />
-        <Footer />
-      </Context.Provider>
-      </div> */
-    
       <div className="App">
       <BrowserRouter>
         <Context.Provider value={[searchInput, setSearchInput]}>
-          <Header />
+          <Header/>
           <Input search={search} />
-
           <Routes>
-            <Route path="/" element={<Results albums={albums} />} />
-            <Route path="/albums/:id" element={<AlbumDetails albums={albums} />} />
+            <Route path="*" element={<Results albums={albums} />} />
+            <Route path="/albums/:id" element={<AlbumDetails albums={albums} tracks={tracks} />} />
           </Routes>
           <Footer />
         </Context.Provider>
       </BrowserRouter>
     </div>
-    
-
+  
   )
 }
+  
 
 export default App

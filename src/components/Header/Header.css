@@ -16,3 +16,19 @@
     text-align: center;
     letter-spacing: 8px;
 }
+
+.anchor {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 420px) {
+    .header {
+        height: auto;
+        font-size: 2em;
+    }
+
+    .p {
+        font-size: 0.7em;
+    }
+}

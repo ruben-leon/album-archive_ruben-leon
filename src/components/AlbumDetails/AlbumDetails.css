@@ -2,17 +2,25 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.tracks {
+    margin-top: 1.5em;
+}
+
+.show-tracks:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
     .cover-image {
-        width: 25em;
-        height: 25em;
+        width: 25em !important;
+        height: 25em !important;
     }
 }
 
 @media (max-width: 715px) {
     .cover-image {
-        width: 20em;
-        height: 20em;
+        width: 20em !important;
+        height: 20em !important;
     }
 }
 
@@ -32,5 +40,12 @@
 
     .cover-image {
         margin-right: 0px !important;
+    }
+}
+
+@media (max-width: 345px) {
+    .cover-image {
+        width: 15em !important;
+        height: 15em !important;
     }
 }

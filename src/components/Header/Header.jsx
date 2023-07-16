@@ -1,13 +1,15 @@
 import './Header.css'
 
-function Header() {
+function Header({ onClick }) {
 
     return (
         <>
-            <div className='header'>
+            <a className='anchor' href="/">
+            <div className='header' onClick={onClick}>
                 ALBUM ARCHIVE
             </div>
-            <p className='p'>POWERED BY SPOTIFY</p>
+                <p className='p'>POWERED BY SPOTIFY</p>
+            </a>
         </>
     )
 }
