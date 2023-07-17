@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, InputGroup, FormControl, Button, Row, Col, Card } from 'react-bootstrap';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import { HashRouter, Routes, Route } from 'react-router-dom'; 
 import React, { useState, useEffect } from 'react';
 import Input from './components/Input/Input';
 import Results from './components/Results/Results';
@@ -93,7 +93,7 @@ function App() {
   return (
    
       <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Context.Provider value={[searchInput, setSearchInput]}>
           <Header/>
           <Input search={search} />
@@ -103,7 +103,7 @@ function App() {
           </Routes>
           <Footer />
         </Context.Provider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   
   )
