@@ -39,7 +39,7 @@ function AlbumDetails({ albums, tracks }) {
             <div className='tracks' style={ showTracks ? {display: 'none'} : {display: 'block'}}>
             
               {albumTracks.map((track, index) => (
-                <ul>
+                <ul className='tracks-list'>
                 <li key={index}>{track}</li>
                 </ul>
               ))}

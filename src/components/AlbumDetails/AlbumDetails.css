@@ -22,6 +22,17 @@
         width: 20em !important;
         height: 20em !important;
     }
+
+    .tracks-list {
+        list-style: none;
+        display: block;
+        padding: 0;
+    }
+
+    .tracks-list li {
+        display: inline;
+        margin-bottom: 1em !important;
+    }
 }
 
 @media (max-width: 650px) {

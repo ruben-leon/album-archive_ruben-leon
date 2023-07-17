@@ -9,3 +9,13 @@
     margin-bottom: 2em;
     font-family: 'Montserrat', sans-serif;
 }
+
+@media (max-width: 600px) {
+    .spotify-img {
+        width: 8em !important;
+    }
+
+    .data-provided {
+        font-size: 0.8em;
+    }
+}
