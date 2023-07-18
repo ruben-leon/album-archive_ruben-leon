@@ -1,8 +1,8 @@
 # ALBUM ARCHIVES
 
-This project is created for practicing new technologies which are commonly used in react. In this app you can search for musicans and bands to see all their albums and information for each album. All data is provided by Spotify API.
+This project was created to practice new technologies which are commonly used in react. In this app you can search for musicans and bands to see all their albums and information for each album. All data, including the cover images, is provided by Spotify APIs and every album that is displayed has a link to the album on Spotify. All rights of the fetched metadata belongs to Spotify or to the displayed artist or label.
 
-If you want to test the app, click [here](https://ruben-leon.github.io/spa-final-project_ruben-leon/)!
+[Visit the App!](https://ruben-leon.github.io/spa-final-project_ruben-leon/)
 
 ## Technologies and Tools:
 
@@ -15,6 +15,9 @@ If you want to test the app, click [here](https://ruben-leon.github.io/spa-final
 
 -   Spotify for Developers
 
+## Screenshots of the App:
+
 ![alt text](./images-for-readme/IMG_5191.jpg)
 ![alt text](./images-for-readme/IMG_5196.jpg)
 ![alt text](./images-for-readme/IMG_5195.jpg)
+
