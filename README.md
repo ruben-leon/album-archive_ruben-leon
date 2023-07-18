@@ -15,4 +15,3 @@ If you want to test the app, click [here](https://ruben-leon.github.io/spa-final
 
 - Spotify for Developers
 
-![alt text]()
