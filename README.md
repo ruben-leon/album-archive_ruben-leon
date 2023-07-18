@@ -1,8 +1,8 @@
 # ALBUM ARCHIVES
 
-This project is created for practicing new technology which is commonly used in react. Below you can find explanations of the technologies and tools used.
+This project is created for practicing new technologies which are commonly used in react. In this app you can search for musicans and bands to see all their albums and information for each album. All data is provided by Spotify API. 
 
-[Here](https://ruben-leon.github.io/spa-final-project_ruben-leon/#/albums/0) you can check out the app!
+If you want to test the app, click [here](https://ruben-leon.github.io/spa-final-project_ruben-leon/)!
 
 ## Technologies and Tools:
 
@@ -10,3 +10,9 @@ This project is created for practicing new technology which is commonly used in 
 - Vite
 - React Router
 - React-Bootstrap
+
+## Data:
+
+- Spotify for Developers
+
+![alt text]()
