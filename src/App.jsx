@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
 
-    var authParameters = {
+    const authParameters = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -40,28 +40,19 @@ function App() {
   async function search() {
     console.log('Search for ' + searchInput);
 
-    var searchParameters = {
+    const searchParameters = {
       method: 'GET',
       headers: {
         'Authorization': 'Bearer ' + accessToken
       }
     }
-    var artistID = await fetch('https://api.spotify.com/v1/search?q=' + searchInput + '&type=artist', searchParameters)
+    const artistID = await fetch('https://api.spotify.com/v1/search?q=' + searchInput + '&type=artist', searchParameters)
       .then(response => response.json())
       .then(data => { return data.artists.items[0].id })
     
     console.log(artistID);
 
-    /* var returnedAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistID + '/albums' + '?include_groups=album&market=US&limit=50', searchParameters)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        setAlbums(data.items);
-        const albumIDs = data.items.map(item => item.id);
-        setTracks(albumIDs);
-        console.log(albumIDs);
-      }); */
-      var returnedAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistID + '/albums' + '?include_groups=album&market=US&limit=50', searchParameters)
+      const returnedAlbums = await fetch('https://api.spotify.com/v1/artists/' + artistID + '/albums' + '?include_groups=album&market=US&limit=50', searchParameters)
       .then(response => response.json())
       .then(data => {
         console.log(data);
