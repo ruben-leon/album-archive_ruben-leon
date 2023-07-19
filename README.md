@@ -13,7 +13,7 @@ This project was created to practice new technologies which are commonly used in
 
 ## Data:
 
--   Spotify for Developers
+-  [Spotify for Developers](https://developer.spotify.com/)
 
 ## Screenshots of the App:
 
