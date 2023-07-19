@@ -15,7 +15,7 @@ function Input({ search }) {
     <>
       {!isAlbumDetailsRoute && (
         <Container style={{ marginTop: '2em', marginBottom: '1.5em' }}>
-          <InputGroup className="mb-3" size="lg">
+          <InputGroup className="mb-3" size="md"> 
             <FormControl
               placeholder="Search For Artist"
               type="input"
