@@ -17,12 +17,7 @@ This project was created to practice new technologies which are commonly used in
 
 ## Screenshots of the App:
 
-![alt text](./images-for-readme/IMG_5191.jpg)
-![alt text](./images-for-readme/IMG_5196.jpg)
-![alt text](./images-for-readme/IMG_5195.jpg)
-![alt text](./images-for-readme/Deftones_Gore_small.png)
 ![alt text](./images-for-readme/Deftones_small.png)
-![alt text](./images-for-readme/KatyP_small.png)
-![alt text](./images-for-readme/KatyP_Witness_small.png)
+![alt text](./images-for-readme/Deftones_Gore_small.png)
 ![alt text](./images-for-readme/LOG_Omens_small.png)
-![alt text](./images-for-readme/LOG_small.png)
+![alt text](./images-for-readme/KatyP_Witness_small.png)
