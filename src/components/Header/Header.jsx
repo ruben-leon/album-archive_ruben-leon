@@ -5,7 +5,7 @@ function Header({ onClick }) {
     return (
         <>
             <div className='header'>
-                <a className='anchor' href="/spa-final-project_ruben-leon/">
+                <a className='anchor' href="/album-archive_ruben-leon/">
                     <div className='header-name' onClick={onClick}>
                         ALBUM ARCHIVE
                     </div>
