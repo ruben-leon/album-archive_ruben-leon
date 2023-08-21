@@ -4,7 +4,7 @@ This project was created to practice new technologies which are commonly used in
 
 All data, including the cover images, is provided by Spotify APIs and every album that is displayed has a link to the album on Spotify. All rights of the fetched metadata belongs to Spotify or to the displayed artist or label.
 
-[Visit the App!](https://ruben-leon.github.io/spa-final-project_ruben-leon/)
+[Visit the App!](https://ruben-leon.github.io/album-archive_ruben-leon/)
 
 ## Technologies and Tools:
 
