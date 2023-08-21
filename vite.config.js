@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/spa-final-project_ruben-leon/",
+  /* base: "/spa-final-project_ruben-leon/", */
+  base: "/album-archives_ruben-leon/",
   plugins: [react()],
 })

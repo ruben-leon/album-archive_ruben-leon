@@ -11,8 +11,8 @@ import './App.css'
 
 export const Context = React.createContext();
 
-const CLIENT_IT = "0fe9c010c07b460b8985d4a3f25ae485";
-const CLIENT_SECRET = "87d45dc784e64cc6af9bd858a16458b4";
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
+const CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET;
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: 'grant_type=client_credentials&client_id=' + CLIENT_IT + '&client_secret=' + CLIENT_SECRET
+      body: 'grant_type=client_credentials&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET
     }
 
     fetch('https://accounts.spotify.com/api/token', authParameters)
@@ -83,7 +83,7 @@ function App() {
 
   return (
    
-      <div className="App">
+    <div className="App">
       <HashRouter>
         <Context.Provider value={[searchInput, setSearchInput]}>
           <Header/>
